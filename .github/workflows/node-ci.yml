@@ -62,6 +62,6 @@ jobs:
       - name: Build & Push Docker Image
         uses: docker/build-push-action@v4
         with:
-          context: .
+          context: .        # current directory, must contain Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/express-codespaces:latest
